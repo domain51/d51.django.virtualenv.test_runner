@@ -1,0 +1,5 @@
+.*.swp
+*.py[co]
+MANIFEST
+dist/*
+build/*
