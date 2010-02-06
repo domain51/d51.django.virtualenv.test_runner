@@ -33,13 +33,13 @@ There's no need to activate virtualenv as you would normally,
 Advanced Usage
 --------------
 There's more to this than that, but that's all you need to get started.  The
-`VirtualEnvTestRunner` class is the work-horse here.  The `run_tests` that you
-imported above is an instance of that class.
+`VirtualEnvironmentTestRunner` class is the work-horse here.  The `run_tests`
+that you imported above is an instance of that class.
 
 ### Changing where `run_tests.py` is located
-You need to directly instantiate `VirtualEnvTestRunner` and provide it with a
-new `caller` parameter.  `caller` is a module which, by default, is equal to
-the `__main__` module.  You can provide your own module, if you like.
+You need to directly instantiate `VirtualEnvironmentTestRunner` and provide it
+with a new `caller` parameter.  `caller` is a module which, by default, is
+equal to the `__main__` module.  You can provide your own module, if you like.
 
 It assumes you have a standard virtualenv layout with that module existing in
 parent of virtualenv's `bin/` directory.  Namely, it needs:
@@ -48,8 +48,9 @@ parent of virtualenv's `bin/` directory.  Namely, it needs:
     bin/
         activate_this.py
 
-If that is not your structure, you need to sub-class `VirtualEnvTestRunner`
-and provide your own `activation_file` method/property.
+If that is not your structure, you need to sub-class
+`VirtualEnvironmentTestRunner` and provide your own `activation_file`
+method/property.
 
 ### Changing the error message
 The default error message is along the lines of:
