@@ -53,6 +53,9 @@ class VirtualEnvTestRunner(object):
 
     def run_tests(self, my_settings, app_to_test):
         self.activate()
+        if hasattr(self.caller, 'setUp'):
+            self.caller.setUp()
+
         self.configure_settings(my_settings)
         self.call_command('test', app_to_test)
 
