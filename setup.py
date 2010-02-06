@@ -20,12 +20,12 @@ for dirpath, dirnames, filenames in os.walk('d51'):
 
 setup(
     name='d51.django.virtualenv.test_runner',
-    version='0.1', # TODO: move this into Dolt.get_version()
+    version='0.2',
     description='Simple package for running isolated Django tests from within virtualenv',
     author='Travis Swicegood',
     author_email='development@domain51.com',
     url='http://github.com/domain51/d51.django.virtualenv.test_runner/',
-    download_url='http://cloud.github.com/downloads/domain51/d51.django.virtualenv.test_runner/d51.django.virtualenv.test_runner-0.1.tar.gz',
+    download_url='http://cloud.github.com/downloads/domain51/d51.django.virtualenv.test_runner/d51.django.virtualenv.test_runner-0.2.tar.gz',
     packages=packages,
     classifiers=[
         'Development Status :: 3 - Alpha',
