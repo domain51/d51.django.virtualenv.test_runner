@@ -4,9 +4,9 @@ pkg_resources.declare_namespace(__name__)
 from d51.django.virtualenv.base import VirtualEnvironment
 
 class VirtualEnvironmentTestRunner(VirtualEnvironment):
-    def run(self, my_settings, app_to_test):
+    def run(self, my_settings, *apps_to_test):
         super(VirtualEnvironmentTestRunner, self).run(my_settings)
-        self.call_command('test', app_to_test)
+        self.call_command('test', *apps_to_test)
 
     def __call__(self, *args, **kwargs):
         self.run(*args, **kwargs)
